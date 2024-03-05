@@ -1,0 +1,28 @@
+// An interactive coordinate system reference diagram and tool 
+//for students and teachers.
+//
+// See interaction tab for keyboard commands.
+//
+// There is also a simpler non-interactive version available:
+// https://www.openprocessing.org/sketch/1004603
+
+
+function setup() {
+	createCanvas(windowWidth, windowHeight);
+	noCursor();
+	textAlign(CENTER, CENTER);
+	resetAllMarkers();
+}
+
+function draw() {
+	background(255);
+	drawGridLines(windowWidth, windowHeight);
+	drawGridLabels(windowWidth, windowHeight);
+	drawXAxisArrow();
+	drawYAxisArrow();
+	drawXLine();
+	drawYLine();
+
+	drawLabeledMousePosition();
+	drawMarkers();
+}
